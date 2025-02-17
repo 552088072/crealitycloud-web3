@@ -1,0 +1,95 @@
+:root {
+  --font-mini: 12px;
+  --font-small: 14px;
+  --font-mid: 16px;
+  --font-mid-2: 18px;
+  --font-big: 20px;
+}
+.isBig .isWeb {
+  --font-big: 20px;
+  --font-mid-2: 18px;
+  --font-mid: 16px;
+  --font-small: 14px;
+}
+
+.isPad .isH5 {
+  --font-big: 18px;
+  --font-mid-2: 16px;
+  --font-mid: 14px;
+  --font-small: 12px;
+}
+
+
+$border-color-base: #DDDDDD;
+
+$border-color-dark: #4A4E58;
+
+// 普通模式变量 
+// 背景色目前只分为两级  灰色背景#F1F3F8  白色块#FFFFFF
+$light-gap-color1: #f1f3f8;
+$light-gap-color2: #fff;
+
+// 亮色字体颜色 分为三级  1级#000  2级#666 3级#999  
+$light-font-color1: #000;
+$light-font-color2: #666;
+$light-font-color3: #999;
+
+// 暗黑模式变量 
+// 背景色目前分为 1 2 3级。 
+$dark-gap-color1: #0A0B0D;
+$dark-gap-color2: #1C1E22;
+$dark-gap-color3: #32353E;
+
+// 暗黑字体颜色 分为三级  1级#000  2级#666 3级#999  
+$dark-font-color1: #eee;
+$dark-font-color2: #999;
+$dark-font-color3: #666;
+
+// 大体上是这么对应的 但是有些小色块由于UI不规范 导致有些小色块还是对不上 需要单独处理
+:root {
+  // 常规 对应颜色
+  --gap-color1: #{$light-gap-color1};
+  --gap-color2: #{$light-gap-color2};
+
+  // 由于亮色模式没有 3级背景色 前期亮色模式较为混乱 所以有一些背景色是混搭的
+  --gap-light2-dark3: #{$light-gap-color2};
+  --gap-light1-dark3: #{$light-gap-color1};
+  --gap-light2-dark1: #{$light-gap-color2};
+  --gap-light1-dark2: #{$light-gap-color1};
+  // 常规 对应字体
+  --font-color1: #{$light-font-color1};
+  --font-color2: #{$light-font-color2};
+  --font-color3: #{$light-font-color3};
+  // 边框
+  --border-color: #{$border-color-base};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gap-color1: #{$dark-gap-color1};
+    --gap-color2: #{$dark-gap-color2};
+    --gap-light2-dark3: #{$dark-gap-color3};
+    --gap-light1-dark3: #{$dark-gap-color3};
+    --gap-light2-dark1: #{$dark-gap-color1};
+    --gap-light1-dark2: #{$dark-gap-color2};
+
+    --font-color1: #{$dark-font-color1};
+    --font-color2: #{$dark-font-color2};
+    --font-color3: #{$dark-font-color3};
+
+    --border-color: #{$border-color-dark};
+  }
+}
+
+html.isDark {
+  --gap-color1: #{$dark-gap-color1};
+  --gap-color2: #{$dark-gap-color2};
+  --gap-light2-dark3: #{$dark-gap-color3};
+  --gap-light1-dark3: #{$dark-gap-color3};
+  --gap-light2-dark1: #{$dark-gap-color1};
+  --gap-light1-dark2: #{$dark-gap-color2};
+
+  --font-color1: #{$dark-font-color1};
+  --font-color2: #{$dark-font-color2};
+  --font-color3: #{$dark-font-color3};
+}

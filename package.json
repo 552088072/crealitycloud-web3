@@ -1,0 +1,45 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "build:test": "nuxt build --dotenv .env.development",
+    "build:prod": "nuxt build --dotenv .env.production",
+    "build:int": "nuxt build --dotenv .env.international",
+    "build:preint": "nuxt build --dotenv .env.preint",
+    "build:prepro": "nuxt build --dotenv .env.prepro",
+    "dev": "nuxt dev",
+    "dev:test": "nuxt dev --dotenv .env.development",
+    "dev:prod": "nuxt dev --dotenv .env.production",
+    "dev:int": "nuxt dev --dotenv .env.international",
+    "dev:preint": "nuxt dev --dotenv .env.preint",
+    "dev:prepro": "nuxt dev --dotenv .env.prepro",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@nuxtjs/i18n": "^8.5.5",
+    "@vueuse/core": "^11.1.0",
+    "element-plus": "^2.9.4",
+    "nuxt": "^3.13.0",
+    "ua-parser-js": "^1.0.39",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.3.13",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "prettier": "^3.4.1",
+    "sass": "1.78.0",
+    "sass-loader": "16.0.2",
+    "unplugin-auto-import": "^19.0.0",
+    "unplugin-vue-components": "^28.0.0"
+  }
+}

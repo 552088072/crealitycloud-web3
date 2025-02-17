@@ -1,0 +1,22 @@
+/* 默认亮色主题 */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #303133;
+  /* 可覆盖 Element Plus 变量，例如：--el-color-primary */
+  --el-color-primary: #00c651;
+  --bg-color-mute: #f2f2f2;
+}
+
+/* 暗黑主题 */
+[data-theme="dark"] {
+  --bg-color: #1f1f1f;
+  --text-color: #ffffff;
+  /* 根据需要修改 Element Plus 变量 */
+  --el-color-primary: #00c651;
+  --bg-color-mute: #2c2c2c;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
