@@ -1,6 +1,8 @@
 <template>
   <div>
     我是没有布局的页面
+
+    test github
   </div>
 </template>
 
