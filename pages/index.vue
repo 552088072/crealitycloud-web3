@@ -7,6 +7,7 @@
   <div>主页内容3</div>
 
   <div>主页内容4</div>
+  <div>主页内容5</div>
   <!-- <div class="bgBox"></div> -->
   
   <div @click="test">请求</div>
